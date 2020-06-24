@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: <INSERT URL TO IMAGE REGISTRY>
+    ports:
+      - "5000:5000"
+    logging:
+      driver: awslogs
+      options: 
+        awslogs-group: logs
+        awslogs-region: ap-southeast-1
+        awslogs-stream-prefix: web
